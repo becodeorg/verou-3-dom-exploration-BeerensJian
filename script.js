@@ -12,11 +12,17 @@ for (var i = 0; i < allImages.length; i++) {
     }
 }
 
+function randomColor() {
+    var o = Math.round, r = Math.random, n = 255;
+    return "rgb(" + o(r() * n) + "," + o(r() * n) + "," + o(r() * n) + ")"
+}
+console.log(randomColor())
 
 const allPars = document.querySelectorAll('p');
 for ( i = 0; i < allPars.length; i++ ) {
     if (allPars[i].className == "") {
     console.log(allPars[i].innerText);
+    allPars[i].style.backgroundColor = randomColor()
 } else {
     var className = allPars[i].innerText.concat( " classname: ", allPars[i].className );
     console.log(className);
