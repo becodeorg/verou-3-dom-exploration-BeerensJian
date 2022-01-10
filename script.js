@@ -1,1 +1,1 @@
-console.log(document.title = "I love Javascript");
+console.log(document.title = "Modifying the DOM");
