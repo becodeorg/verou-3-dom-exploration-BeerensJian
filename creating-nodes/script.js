@@ -23,9 +23,11 @@ function getLuminence(color) {
     return parseInt(x);
 }
 
+
+// function to add a section with in it a paragraph with some text to the article element in the body
 function addLearners() {
 
-    let learners = ["Jian", "Feruz", "Sara", "Ahmad", "Jawid", "Michelle", "Jordy", "Benjamin", "Dante"];
+    let learners = ["Jian", "Feruz", "Sara", "Ahmad", "Jawid", "Michelle", "Jordy", "Benjamin", "Dante", "Ellen", "Cynthia", "Michael", "Nicolas", "Beryl", "Pieter", "Ruben", "Magali", "Koen", "Colin"];
     learners = learners.sort(() => Math.random() - 0.5)
     for (i = 0; i < learners.length; i++) {
         const newContent = document.createTextNode("Meow im a cat, no I'm a dog actually. Correction I am " + learners[i]);
