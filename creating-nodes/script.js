@@ -2,12 +2,16 @@ document.body.onload = addLearners();
 
 var bgColor = "hsl(211, 94%, 40%)";
 document.body.style.backgroundColor = bgColor;
-var lumi = bgColor.slice(13);
-lumi = lumi.replace(/\D/g,'')
-console.log(lumi);
 
+var learners1 = ["Jian", "Feruz", "Sara", "Ahmad", "Jawid", "Michelle", "Jordy", "Benjamin", "Dante"];
+var leaners2 = shuffle(learners1);
+console.log(leaners2)
 
-
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+  }
+  
+// function to generate a random HSL color
 function randomHSL() {
     var h = Math.round(Math.random() * 360);
     var s = Math.round(Math.random() * 100);
@@ -23,20 +27,21 @@ function randomHSL() {
     return parseInt(x);
    }
 
-
+   
 
 function addLearners() {
-    const learners = ["Jian", "Feruz", "Sara", "Ahmad", "Jawid", "Michelle", "Jordy", "Benjamin", "Dante"];
-   
+    
+    let learners = ["Jian", "Feruz", "Sara", "Ahmad", "Jawid", "Michelle", "Jordy", "Benjamin", "Dante"];
+    learners = learners.sort(() => Math.random() - 0.5)
     for (i = 0; i < learners.length; i++) {
-        const newContent = document.createTextNode("Meow im a cat, no I'm a dog actually. Correction I am " + learners[i])
+        const newContent = document.createTextNode("Meow im a cat, no I'm a dog actually. Correction I am " + learners[i]);
         const newPara = document.createElement("p");
         const newSection = document.createElement("section");
 
         newPara.appendChild(newContent); // Add text to the paragraph element
         newSection.appendChild(newPara); // Add the paragraph element to the section
         var randomColor = randomHSL();
-        if (getLuminence(randomColor) <= 50) {
+        if (getLuminence(randomColor) <= 50) { // Check if the lumince value of the color is low or high incase its low give turn the text color to white.
             newSection.style.color = "White";
         }
         newSection.style.backgroundColor = randomColor; // Give the section element a random background color
