@@ -37,7 +37,7 @@ function addLearners() {
         newPara.appendChild(newContent); // Add text to the paragraph element
         newSection.appendChild(newPara); // Add the paragraph element to the section
         var randomColor = randomHSL();
-        if (getLuminence(randomColor) <= 50) { // Check if the lumince value of the color is low or high incase its low give turn the text color to white.
+        if (getLuminence(randomColor) < 50) { // Check if the lumince value of the color is low or high incase its low give turn the text color to white.
             newSection.style.color = "White";
         }
         newSection.style.backgroundColor = randomColor; // Give the section element a random background color
