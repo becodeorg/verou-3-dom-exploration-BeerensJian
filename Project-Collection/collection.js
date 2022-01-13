@@ -90,3 +90,6 @@ const BOOKCOLLECTION = [
         cover: "images/givefk.jpg"
     },
 ]
+
+const cardDiv = document.createElement("div")
+cardDiv.className = "card";
