@@ -3,6 +3,8 @@ In this exercise we had to gather data and use this data to dynamically display 
 
 
 ##Links to webpages
+
+
 [Collection with framework](https://blissful-kirch-245f99.netlify.app/)
 
 
