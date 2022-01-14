@@ -90,6 +90,37 @@ const BOOKCOLLECTION = [
         cover: "images/givefk.jpg"
     },
 ]
+for ( i = 0 ; i < BOOKCOLLECTION.length ; i++) {
+   
+   
+    const cardDiv = document.createElement("div")
+    cardDiv.className = "card";
+    
+    const h2element = document.createElement("h2");
+    h2element.innerHTML = BOOKCOLLECTION[i].title;
+    cardDiv.appendChild(h2element);
 
-const cardDiv = document.createElement("div")
-cardDiv.className = "card";
+    const author = document.createElement("p");
+    author.innerHTML = BOOKCOLLECTION[i].author;
+    author.className = "";
+    cardDiv.appendChild(author);
+
+    const img = document.createElement("img")
+    img.src = BOOKCOLLECTION[i].cover;
+    img.setAttribute("width", "200px")
+    cardDiv.appendChild(img);
+
+    const description = document.createElement("p");
+    description.innerHTML = BOOKCOLLECTION[i].description;
+    cardDiv.appendChild(description);
+
+    const badge = document.createElement("p");
+    badge.className = "badge";
+    badge.innerHTML = BOOKCOLLECTION[i].publishYear;
+    cardDiv.appendChild(badge);
+
+    const cardHolder = document.querySelector("main");
+    cardHolder.appendChild(cardDiv);
+    console.log("cardholder")
+
+}
