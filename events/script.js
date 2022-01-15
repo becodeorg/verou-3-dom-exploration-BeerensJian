@@ -38,6 +38,10 @@ actionsquare.addEventListener('click', clickOnSquare);
 document.body.addEventListener("keypress", function(e){
     if (e.code === "Space") {
         document.body.style.background = randomgradient( );
+        const newLi = document.createElement("li");
+        const list = document.querySelector("ul");
+        newLi.innerText = "[" + getElapsedTime() + "]" + " Background color changed"
+        list.appendChild(newLi)
     }
 })
 
