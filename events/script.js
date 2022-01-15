@@ -42,6 +42,11 @@ document.body.addEventListener("keypress", function(e){
         const list = document.querySelector("ul");
         newLi.innerText = "[" + getElapsedTime() + "]" + " Background color changed"
         list.appendChild(newLi)
+    } else if (e.code === "KeyI") {
+        const liList = this.querySelectorAll("li");
+        liList.forEach((item) => {
+            item.remove()
+        })
     }
 })
 
