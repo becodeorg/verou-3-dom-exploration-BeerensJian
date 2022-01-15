@@ -47,6 +47,12 @@ document.body.addEventListener("keypress", function(e){
         liList.forEach((item) => {
             item.remove()
         })
+    } else if (e.code === "KeyS") {
+        const squares = document.querySelectorAll(".displayedsquare");
+        squares.forEach((square) => {
+            square.remove();
+        } )
+
     }
 })
 
