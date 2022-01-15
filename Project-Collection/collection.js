@@ -93,7 +93,7 @@ const BOOKCOLLECTION = [
 for ( i = 0 ; i < BOOKCOLLECTION.length ; i++) {
    
    
-    const cardDiv = document.createElement("div")
+    var cardDiv = document.createElement("div")
     cardDiv.className = "card";
     
     const h2element = document.createElement("h2");
@@ -119,8 +119,16 @@ for ( i = 0 ; i < BOOKCOLLECTION.length ; i++) {
     badge.innerHTML = BOOKCOLLECTION[i].publishYear;
     cardDiv.appendChild(badge);
 
-    const cardHolder = document.querySelector("main");
+    var cardHolder = document.querySelector("main");
     cardHolder.appendChild(cardDiv);
-    console.log("cardholder")
+    
+}
 
+
+
+
+
+function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
 }
