@@ -66,3 +66,19 @@ function randomRGB() {
 function randomgradient() {
     return "linear-gradient( to bottom right," + randomRGB() + ", " + randomRGB() + ' ) fixed';
 }
+
+const squarecontainer = document.querySelector(".displayedsquare-wrapper");
+squarecontainer.addEventListener("click", function(e) {
+    if (e.target.classList[1]) {
+        someFunc(e)
+    }
+})
+function someFunc(e) {
+    if (e.target.classList[1] === "green") {
+        alert("The color of this square is green")
+    } else if (e.target.classList[1] === "violet") {
+        alert("The color of this square is violet");
+    } else {
+        alert("The color of this square is orange");
+    }
+} 
