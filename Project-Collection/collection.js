@@ -132,3 +132,24 @@ function random_rgba() {
     var o = Math.round, r = Math.random, s = 255;
     return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
 }
+
+
+const cards = document.querySelectorAll(".card");
+for (let card of cards) {
+    card.addEventListener("mouseover", function() {
+        console.log(card);
+        card.style.backgroundColor = random_rgba();
+        card.style.boxShadow = "0 0 0 9999px #141414b0";
+        card.style.zIndex = 100;
+    })
+}
+
+for (let card of cards) {
+    card.addEventListener("mouseout", function() {
+        console.log(card);
+        card.style.backgroundColor = "transparent";
+        card.style.boxShadow = "none";
+        card.style.zIndex = 0;
+    })
+}
+document.body.style
