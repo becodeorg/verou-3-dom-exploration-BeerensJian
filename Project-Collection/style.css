@@ -20,6 +20,11 @@ header p {
 header h1 {
     padding:28px;
 }
+header input {
+    margin: 10px;
+    line-height: 1.5em;
+    text-align: center;
+}
 main {
     display: flex;
     flex-wrap: wrap;
