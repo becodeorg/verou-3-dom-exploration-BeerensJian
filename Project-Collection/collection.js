@@ -134,17 +134,19 @@ function random_rgba() {
 }
 
 // hover effects
+
 const cards = document.querySelectorAll(".card");
 for (let card of cards) {
     card.addEventListener("mouseover", function() {
         card.style.backgroundColor = random_rgba();
         card.style.boxShadow = "0 0 0 9999px #141414b0";
         card.style.zIndex = 100;
+        
     })
 }
 
 for (let card of cards) {
-    card.addEventListener("mouseout", function() {
+    card.addEventListener("mouseleave", function() {
         card.style.backgroundColor = "transparent";
         card.style.boxShadow = "none";
         card.style.zIndex = 0;
@@ -153,8 +155,6 @@ for (let card of cards) {
 
 // searchbar
 const searchbar = document.querySelector("input");
-console.log(searchbar);
-console.log(cards)
 searchbar.addEventListener("keyup", () => {
     for (i = 0; i< cards.length ; i++) {
         if (cards[i].children[0].textContent.toLowerCase().includes(searchbar.value.toLowerCase())) {
