@@ -42,8 +42,22 @@ const passCheck = (e) => {
         passfield1.style.backgroundColor = "white";
         passfield2.style.backgroundColor = "white";
     }
-    console.log(e)
 }
 
 passfield1.addEventListener("keyup", passCheck)
 passfield2.addEventListener("keyup", passCheck)
+
+// Add a change listener to the dropdown menu
+// background black and text white
+
+const toggle = document.querySelector("#toggle-darkmode");
+
+toggle.addEventListener("change",  (e) => {
+if (e.target.value === "dark") {
+    document.body.style.background = "#252323"
+    document.body.style.color = "white"
+} else {
+    document.body.style.background = "white"
+    document.body.style.color = "black"
+}
+})
