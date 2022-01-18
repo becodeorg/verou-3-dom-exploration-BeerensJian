@@ -134,14 +134,12 @@ function random_rgba() {
 }
 
 // hover effects
-
 const cards = document.querySelectorAll(".card");
 for (let card of cards) {
     card.addEventListener("mouseover", function() {
         card.style.backgroundColor = random_rgba();
         card.style.boxShadow = "0 0 0 9999px #141414b0";
         card.style.zIndex = 100;
-        
     })
 }
 
